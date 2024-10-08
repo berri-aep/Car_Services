@@ -1,0 +1,16 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.title{
+    position: relative;
+    @include between;
+    font-size: 3rem;
+    border-bottom: 1px solid $clr--light;
+    margin-bottom: 2rem;
+    
+}
+.title2{
+    font-size: 3rem;
+    border-bottom: 1px solid #89888c;
+    margin-bottom: 2rem;
+}

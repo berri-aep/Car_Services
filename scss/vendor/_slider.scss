@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+.tns-outer{
+    max-width: 100rem;
+    & > button{
+        display: none;
+    }
+}
+.tns-nav{
+    display: none;
+}
+.prev{
+    color: $clr--secondary;
+    background-color: $clr--light;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    &:hover{
+        background-color: $clr--dark;
+    }
+}
+.next{
+    @extend .prev;
+}

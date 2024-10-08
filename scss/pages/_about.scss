@@ -1,0 +1,131 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.aboutPage {
+  @include mediaQuery(520px){
+    .container{
+      padding: 0rem;
+    }
+    padding-top: 10rem;
+  }
+
+  &__features {
+    padding-top: 2rem 0;
+    &--card {
+      padding: 3rem;
+    }
+    &--details {
+      @include mediaQuery(520px){
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 3rem;
+      }
+      @include evenGrid(4, 1fr);
+    }
+    &--cards {
+      @include mediaQuery(520px){
+        margin: 1rem 0;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+        justify-content: center;
+      }
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 3rem ;
+      h1 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+     h2{
+      @include mediaQuery(520px){
+          font-size: 2.5rem;
+        }
+          font-weight: 300;
+          font-family: $font--secondary;
+        }
+  }
+  &__history{
+    @include mediaQuery(520px){
+      grid-template-columns: 1fr;
+    }
+    @include unevenGrid(2fr 1fr, 1fr);
+    gap: 2rem;
+    &--card{
+        padding: 3rem;
+        justify-content: center;
+        @include mediaQuery(520px){
+          justify-content: left;
+          
+        }
+        a{
+            color: $clr--light;
+            &:hover{
+                color: $clr--dark;
+                transition: 0.5s ease;
+            }
+        }
+    
+      }
+       h2{
+        @include mediaQuery(520px){
+          font-size: 2.5rem;
+        }
+          font-weight: 300;
+          font-family: $font--secondary;
+        }
+  }
+  &__team{
+    padding: 5rem;
+    @include mediaQuery(520px){
+      padding: 3rem;
+    }
+    &--card{
+        h2{
+          @include mediaQuery(520px){
+          font-size: 2.5rem;
+        }
+            color: $clr--dark
+        }
+    }
+    &--cards{
+        img{
+            padding-bottom: 2rem;
+        }
+        a{
+            color: $clr--secondary;
+            text-decoration: underline;
+            &:hover{
+                color: $clr--dark;
+                transition: 0.5s ease;
+            }
+        }
+    }
+    &--details{
+      @include mediaQuery(520px){
+      grid-template-columns: 1fr;
+    }
+        @include evenGrid(4, 1fr);
+        gap: 2rem;
+        p{
+            padding-top: 1rem;
+            color: $clr--dark;
+            a{
+                color: $clr--dark;
+                &:hover{
+                color: $clr--secondary;
+            }
+            }
+        }
+    }
+     h2{
+          font-weight: 300;
+          font-family: $font--secondary;
+        }
+  }
+}

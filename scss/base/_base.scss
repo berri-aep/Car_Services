@@ -2,7 +2,8 @@
 @use "./typhography" as *;
 
 body {
-    color: $clr--light;
+    color: $clr--light ;
+    background-color: $clr--dark;
     font-family: $font--primary;
     font-size: 2rem;
     overflow-x: hidden;
