@@ -1,0 +1,84 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog {
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem;
+    }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+
+    @include mediaQuery(520px) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid rgba(163, 155, 155, 0.1);
+  }
+
+  &__cards {
+    @include unevenGrid(5rem 65rem, 2rem);
+    padding: 2rem;
+    border-bottom: 1px solid rgba(163, 155, 155, 0.1);
+
+    @include mediaQuery(520px) {
+      grid-template-columns: 5rem 1fr;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 2rem;
+
+    @include mediaQuery(520px) {
+      flex-direction: column;
+    }
+
+    img {
+      height: 15rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-family: $font--primary;
+      padding-bottom: 1rem;
+    }
+    p {
+      padding-bottom: 4rem;
+    }
+  }
+  &__date {
+    h4 {
+      font-weight: 300;
+      font-size: 5rem;
+      text-align: center;
+      letter-spacing: -0.4rem;
+      font-family: $font--secondary;
+    }
+    h3 {
+      font-size: 2rem;
+      line-height: 0;
+      padding-left: 0.3rem;
+    }
+  }
+  &__button {
+    padding-top: 5rem;
+
+    @include mediaQuery(520px) {
+      padding: 4rem;
+    }
+  }
+  &__title {
+    h1 {
+      font-family: $font--secondary;
+    }
+  }
+  &__img {
+    max-width: 100%;
+  }
+}
