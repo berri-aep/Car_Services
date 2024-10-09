@@ -38,12 +38,17 @@
         display: none;
     }
 }
+.servicesBanner .tns-nav{
+     & > button{
+        display: none;
+    }
+}
 
-#controls{
+.homeContent #controls{
     position: absolute;
 }
 
-.prev{
+.servicesBanner__slider--controls .prev{
     color: $clr--light;
     font-size: 2rem;
     &:hover{
@@ -51,7 +56,7 @@
     }
 }
 
-.next{
+.servicesBanner__slider--controls .next{
     @extend .prev;
     &:hover{
         color: $clr--dark

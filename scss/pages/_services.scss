@@ -1,0 +1,150 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.servicesBanner {
+  @include mediaQuery(520px) {
+    .container {
+      padding: 0rem;
+    }
+    padding-top: 10rem;
+  }
+  &__slider {
+    @include mediaQuery(520px) {
+      padding: 3rem;
+    }
+    padding: 5rem;
+    &--details--cards {
+      @include evenGrid(1fr, 1);
+      a {
+        color: $clr--secondary;
+        text-decoration: underline;
+        &:hover {
+          color: $clr--dark;
+        }
+      }
+      img {
+        padding-bottom: 2rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+    h2 {
+      @include mediaQuery(520px){
+          font-size: 2.5rem;
+        }
+      font-weight: 300;
+      font-family: $font--secondary;
+    }
+  }
+}
+.Price {
+  @include mediaQuery(520px) {
+    .container {
+      padding: 0rem;
+    }
+  }
+  padding-bottom: 2rem;
+  h2 {
+    @include mediaQuery(520px){
+          font-size: 2rem;
+        }
+    font-weight: 200;
+    color: $clr--dark;
+  }
+  &__left {
+    a {
+      padding-bottom: 1.5rem;
+      font-size: 13px;
+      color: $clr--secondary;
+      font-family: $font--primary;
+      display: block;
+      line-height: 1rem;
+      &::after {
+        display: inline-block;
+        position: relative;
+        content: " ";
+        width: 25rem;
+        top: 0.7rem;
+        height: 1px;
+        opacity: 0.3;
+        background-color: #89888c;
+      }
+
+      &:hover {
+        color: $clr--dark;
+      }
+    }
+    em {
+      background: url(/IMG/ellipsis.png) repeat-x 0% 13px;
+      display: block;
+      overflow: hidden;
+    }
+  }
+  &__right {
+    a {
+      font-size: 13px;
+      color: $clr--dark;
+      font-family: $font--primary;
+      display: block;
+      line-height: 1rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+    p {
+      @include mediaQuery(520px) {
+        width: 25rem;
+      }
+      width: 50rem;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    color: $clr--dark;
+  }
+  &__wrapper {
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      padding: 3rem;
+    }
+    background-color: $clr--light;
+    @include unevenGrid(1fr 2fr, 2rem);
+    padding: 5rem;
+  }
+  &__lists {
+    @include mediaQuery(520px) {
+      display: flex;
+      flex-direction: column;
+    }
+    margin-right: 5rem;
+    display: flex;
+    gap: 5rem;
+    color: $clr--dark;
+    em {
+      background: url(/img/ellipsis.png) repeat-x 0% 13px;
+      display: block;
+      overflow: hidden;
+    }
+
+    a {
+      @include mediaQuery(520px) {
+      width: 110%;
+    }
+      font-size: 15px;
+      width: 15rem;
+      float: left;
+      font-family: $clr--secondary;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+  }
+  &__col {
+    margin-top: 1rem;
+    ul li {
+      padding-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.lightLetters{
+  margin: 1rem 0;
+  font-size: 1rem;
+  opacity: 0.6;
+}

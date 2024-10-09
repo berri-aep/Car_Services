@@ -23,6 +23,7 @@
   .title {
     h2 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: $clr--dark;
 
       @include mediaQuery(520px) {
         padding-top: 2rem;
@@ -35,6 +36,13 @@
     flex-direction: column;
     width: 50rem;
     height: 45rem;
+
+    h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: $clr--dark;
+      font-size: 3rem;
+      font-family: $font--secondary;
+    }
 
     @include mediaQuery(520px) {
       width: 100%;
@@ -68,6 +76,7 @@
     }
     input:focus::placeholder,
     textarea:focus::placeholder {
+      color: gray;
      
     }
     textarea {
@@ -83,6 +92,8 @@
   }
 
   &__find {
+
+
     p {
       color: $clr--dark;
       font-family: $font--primary;
