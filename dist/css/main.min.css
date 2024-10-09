@@ -1141,6 +1141,7 @@ h1 {
 }
 .blog__title {
   border-bottom: 1px solid rgba(163, 155, 155, 0.1);
+  padding-top: 15rem;
 }
 .blog__cards {
   display: grid;
@@ -1219,6 +1220,7 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    padding-top: 10rem;
   }
 }
 .contact .title h2 {
