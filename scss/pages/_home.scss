@@ -1,0 +1,353 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.homeBanner {
+
+    &__card {
+    img {
+    object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+      
+    }
+
+    &--1 {
+      position: relative;
+      h1 {
+        font-weight: 500;
+        font-family: $font--primary;
+        width: 19rem;
+        position: absolute;
+        font-size: 3rem;
+        z-index: 9999;
+        left: 58rem;
+        top: 13rem;
+      }
+    }
+
+    &--2 {
+      position: relative;
+      h1 {
+        font-weight: 500;
+        font-family: $font--primary;
+        width: 19rem;
+        position: absolute;
+        font-size: 3rem;
+        left: 58rem;
+        top: 13rem;
+        z-index: 9999;
+      }
+    }
+
+    &--3 {
+      position: relative;
+      h1 {
+        font-weight: 500;
+        font-family: $font--primary;
+        width: 19rem;
+        position: absolute;
+        font-size: 3rem;
+        left: 58rem;
+        top: 13rem;
+        z-index: 9999;
+      }
+    }
+
+   
+  } @include mediaQuery(520px){
+        &__wrapper{
+            padding-top: 10rem;
+            
+        } 
+        .container{
+            padding: 0rem 1rem;
+        }
+
+        &__card{
+            
+            img{
+                
+            }
+        &--1 {
+      position: relative;
+      h1 {
+        font-weight: 600;
+        font-family: $font--primary;
+        width: 8rem;
+        position: absolute;
+        font-size: 1.2rem;
+        z-index: 9999;
+        left: 20rem;
+        top: 6rem;
+        text-align: right;
+      }
+            }
+
+        &--2 {
+      position: relative;
+      h1 {
+        font-weight: 600;
+        font-family: $font--primary;
+        width: 8rem;
+        position: absolute;
+        font-size: 1.2rem;
+        z-index: 9999;
+        left: 20rem;
+        top: 6rem;
+        text-align: right;
+      }
+        }
+
+         &--3 {
+      position: relative;
+      h1 {
+        font-weight: 600;
+        font-family: $font--primary;
+        width: 8rem;
+        position: absolute;
+        font-size: 1.2rem;
+        z-index: 9999;
+        left: 20rem;
+        top: 6rem;
+        text-align: right;
+      }
+            }
+        }
+    }
+}
+
+.homeServices {
+    padding: 3rem;
+  &__wrapper {
+    position: relative;
+    @include evenGrid(4, 3rem);
+    background-color: $clr--primary;
+    padding: 3rem 5rem;
+  }
+  &__span {
+    z-index: 1;
+  }
+  &__card {
+    text-align: center;
+    position: relative;
+    z-index: 11;
+    &::after {
+      content: " ";
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 37rem;
+      background-color: $clr--primary;
+
+      scale: 0.3;
+      top: -4rem;
+      transition: 0.3s ease-in;
+      z-index: -1;
+    }
+    &:hover {
+      &::after {
+        scale: 1;
+        background-color: rgba(51, 50, 50, 0.767);
+        transition: 0.5s ease;
+      }
+      a {
+        background-color: $clr--light;
+        color: $clr--dark;
+        transition: 0.3s ease-in;
+      }
+      i {
+        color: $clr--secondary;
+        transition: 0.3s ease-in;
+      }
+    }
+
+    &--title {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 2rem 0;
+      }
+      max-width: 25rem;
+      border-bottom: 4px solid rgba(102, 99, 99, 0.2);
+    }
+
+    &--details {
+      z-index: 999;
+      i {
+        font-size: 3rem;
+        color: $clr--light;
+        padding: 2rem 0;
+        transition: 0.3s ease-in;
+      }
+
+      p {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+
+  @include mediaQuery(520px){
+    padding: 3rem 0;
+    &__wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0; 
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    &__card{
+
+        &--title{
+            max-width: 35rem;
+
+            h3{
+                padding-top: 5rem;
+            }
+        }
+        &:hover{
+        &::after{
+            scale: 0;
+            background-color: transparent;
+        }
+        }
+    }
+
+
+  }
+}
+
+.homeContent {
+  &__wrapper {
+    padding: 2rem;
+  }
+
+  &__title {
+    @include between;
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    a {
+      color: $clr--light;
+    }
+    i {
+      padding-right: 0.5rem;
+    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  &__card {
+    padding: 2rem 0;
+    img {
+    }
+  }
+
+  @include mediaQuery(520px){
+    .container{
+        padding: 0rem;
+    }
+  }
+}
+
+.homeAbout {
+    padding: 3rem;
+  &__wrapper {
+    @include evenGrid(2, 3rem);
+    padding: 5rem;
+  }
+
+  &__left {
+    h2 {
+      font-family: $font--secondary;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $clr--dark;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(102, 99, 99, 0.2);
+    }
+    p {
+      color: $clr--dark;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(102, 99, 99, 0.2);
+    }
+    h5 {
+      color: $clr--dark;
+      font-weight: 500;
+      padding: 3rem 0;
+    }
+  }
+
+  &__right {
+    h2 {
+      padding-bottom: 1rem;
+      color: $clr--dark;
+      font-family: $font--secondary;
+      font-size: 2rem;
+      font-weight: 500;
+      border-bottom: 2px solid rgba(102, 99, 99, 0.2);
+    }
+    p {
+      color: $clr--dark;
+    }
+    :nth-child(2) {
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(102, 99, 99, 0.2);
+    }
+    :nth-child(3) {
+      color: $clr--secondary;
+      font-size: 0.9rem;
+      padding: 1rem 0;
+    }
+    :last-child {
+      padding-top: 1rem;
+      border-top: 2px solid rgba(102, 99, 99, 0.2);
+    }
+  }
+
+  @include mediaQuery (520px){
+
+    padding: 3rem 0;
+    .container{
+        padding: 0rem;
+    }
+
+    &__wrapper{
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+  }
+}
+
+.homeApp {
+  &__wrapper {
+    padding: 5rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+    font-family: $font--secondary;
+    font-weight: 500;
+  }
+
+  i {
+    font-size: 1.8rem;
+    color: $clr--light;
+  }
+
+  @include mediaQuery (520px){
+    
+    .container{
+        padding: 0rem;
+    }
+    h1{
+        font-size: 4rem;
+        
+    }
+  }
+}
