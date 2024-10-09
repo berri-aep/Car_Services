@@ -966,6 +966,7 @@ p {
 }
 
 body {
+  color: #fff;
   background-color: #26252a;
   font-family: "Ubuntu", Arial, sans-serif;
   font-size: 2rem;
@@ -1080,22 +1081,6 @@ img {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-}
-
-.btn {
-  padding: 0.8rem 2rem;
-  background-color: transparent;
-  border: 1px solid transparent;
-  font-size: 1rem;
-}
-.btn.bg--secondary {
-  background-color: #f8565d;
-  color: #fff;
-  transition: 0.3s ease-in;
-}
-.btn.bg--secondary:hover {
-  background-color: #fff;
-  color: #26252a;
 }
 
 .header {
@@ -1570,6 +1555,360 @@ img {
   }
 }
 
+@media screen and (max-width: 520px) {
+  .aboutPage {
+    padding-top: 10rem;
+  }
+  .aboutPage .container {
+    padding: 0rem;
+  }
+}
+.aboutPage__features {
+  padding-top: 2rem 0;
+}
+.aboutPage__features--card {
+  padding: 3rem;
+}
+.aboutPage__features--details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1fr;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__features--details {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    gap: 3rem;
+  }
+}
+.aboutPage__features--cards {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__features--cards {
+    margin: 1rem 0;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+.aboutPage__features--cards h1 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.aboutPage__features--cards p {
+  margin-bottom: 3rem;
+}
+.aboutPage__features h2 {
+  font-weight: 300;
+  font-family: "Ubuntu Condensed", Arial, sans-serif;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__features h2 {
+    font-size: 2.5rem;
+  }
+}
+.aboutPage__history {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__history {
+    grid-template-columns: 1fr;
+  }
+}
+.aboutPage__history--card {
+  padding: 3rem;
+  justify-content: center;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__history--card {
+    justify-content: left;
+  }
+}
+.aboutPage__history--card a {
+  color: #fff;
+}
+.aboutPage__history--card a:hover {
+  color: #26252a;
+  transition: 0.5s ease;
+}
+.aboutPage__history h2 {
+  font-weight: 300;
+  font-family: "Ubuntu Condensed", Arial, sans-serif;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__history h2 {
+    font-size: 2.5rem;
+  }
+}
+.aboutPage__team {
+  padding: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__team {
+    padding: 3rem;
+  }
+}
+.aboutPage__team--card h2 {
+  color: #26252a;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__team--card h2 {
+    font-size: 2.5rem;
+  }
+}
+.aboutPage__team--cards img {
+  padding-bottom: 2rem;
+}
+.aboutPage__team--cards a {
+  color: #f8565d;
+  text-decoration: underline;
+}
+.aboutPage__team--cards a:hover {
+  color: #26252a;
+  transition: 0.5s ease;
+}
+.aboutPage__team--details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutPage__team--details {
+    grid-template-columns: 1fr;
+  }
+}
+.aboutPage__team--details p {
+  padding-top: 1rem;
+  color: #26252a;
+}
+.aboutPage__team--details p a {
+  color: #26252a;
+}
+.aboutPage__team--details p a:hover {
+  color: #f8565d;
+}
+.aboutPage__team h2 {
+  font-weight: 300;
+  font-family: "Ubuntu Condensed", Arial, sans-serif;
+}
+
+@media screen and (max-width: 520px) {
+  .servicesBanner {
+    padding-top: 10rem;
+  }
+  .servicesBanner .container {
+    padding: 0rem;
+  }
+}
+.servicesBanner__slider {
+  padding: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .servicesBanner__slider {
+    padding: 3rem;
+  }
+}
+.servicesBanner__slider--details--cards {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  gap: 1;
+}
+.servicesBanner__slider--details--cards a {
+  color: #f8565d;
+  text-decoration: underline;
+}
+.servicesBanner__slider--details--cards a:hover {
+  color: #26252a;
+}
+.servicesBanner__slider--details--cards img {
+  padding-bottom: 2rem;
+}
+.servicesBanner__slider--details--cards p {
+  margin-bottom: 1rem;
+}
+.servicesBanner__slider h2 {
+  font-weight: 300;
+  font-family: "Ubuntu Condensed", Arial, sans-serif;
+}
+@media screen and (max-width: 520px) {
+  .servicesBanner__slider h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.Price {
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .Price .container {
+    padding: 0rem;
+  }
+}
+.Price h2 {
+  font-weight: 200;
+  color: #26252a;
+}
+@media screen and (max-width: 520px) {
+  .Price h2 {
+    font-size: 2rem;
+  }
+}
+.Price__left a {
+  padding-bottom: 1.5rem;
+  font-size: 13px;
+  color: #f8565d;
+  font-family: "Ubuntu", Arial, sans-serif;
+  display: block;
+  line-height: 1rem;
+}
+.Price__left a::after {
+  display: inline-block;
+  position: relative;
+  content: " ";
+  width: 25rem;
+  top: 0.7rem;
+  height: 1px;
+  opacity: 0.3;
+  background-color: #89888c;
+}
+.Price__left a:hover {
+  color: #26252a;
+}
+.Price__left em {
+  background: url(/IMG/ellipsis.png) repeat-x 0% 13px;
+  display: block;
+  overflow: hidden;
+}
+.Price__right a {
+  font-size: 13px;
+  color: #26252a;
+  font-family: "Ubuntu", Arial, sans-serif;
+  display: block;
+  line-height: 1rem;
+}
+.Price__right a:hover {
+  color: #f8565d;
+}
+.Price__right p {
+  width: 50rem;
+}
+@media screen and (max-width: 520px) {
+  .Price__right p {
+    width: 25rem;
+  }
+}
+.Price p {
+  font-size: 15px;
+  color: #26252a;
+}
+.Price__wrapper {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .Price__wrapper {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+  }
+}
+.Price__lists {
+  margin-right: 5rem;
+  display: flex;
+  gap: 5rem;
+  color: #26252a;
+}
+@media screen and (max-width: 520px) {
+  .Price__lists {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.Price__lists em {
+  background: url(/img/ellipsis.png) repeat-x 0% 13px;
+  display: block;
+  overflow: hidden;
+}
+.Price__lists a {
+  font-size: 15px;
+  width: 15rem;
+  float: left;
+  font-family: #f8565d;
+}
+@media screen and (max-width: 520px) {
+  .Price__lists a {
+    width: 110%;
+  }
+}
+.Price__lists a:hover {
+  color: #f8565d;
+}
+.Price__col {
+  margin-top: 1rem;
+}
+.Price__col ul li {
+  padding-bottom: 1.5rem;
+}
+
+.lightLetters {
+  margin: 1rem 0;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+}
+.btn.bg--secondary {
+  background-color: #f8565d;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+.btn.bg--secondary:hover {
+  background-color: #fff;
+  color: #26252a;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 2rem;
+}
+.title i {
+  padding: 0.5rem;
+  background-color: #fff;
+  color: #f8565d;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+.title i:hover {
+  background-color: #26252a;
+  transition: 0.2s ease;
+}
+
+.title2 {
+  font-size: 3rem;
+  border-bottom: 1px solid #89888c;
+  margin-bottom: 2rem;
+}
+
 .homeBanner .tns-outer > button {
   display: none;
 }
@@ -1602,18 +1941,22 @@ img {
   display: none;
 }
 
-#controls {
+.servicesBanner .tns-nav > button {
+  display: none;
+}
+
+.homeContent #controls {
   position: absolute;
 }
 
-.prev, .next {
+.servicesBanner__slider--controls .prev, .servicesBanner__slider--controls .next {
   color: #fff;
   font-size: 2rem;
 }
-.prev:hover, .next:hover {
+.servicesBanner__slider--controls .prev:hover, .servicesBanner__slider--controls .next:hover {
   color: #26252a;
 }
 
-.next:hover {
+.servicesBanner__slider--controls .next:hover {
   color: #26252a;
 }/*# sourceMappingURL=main.min.css.map */
