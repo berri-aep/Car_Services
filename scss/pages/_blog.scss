@@ -19,7 +19,9 @@
 
   &__title {
     border-bottom: 1px solid rgba(163, 155, 155, 0.1);
-    padding-top: 15rem;
+    @include mediaQuery(520px) {
+      padding-top: 15rem;
+    }
   }
 
   &__cards {

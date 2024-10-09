@@ -1141,7 +1141,11 @@ h1 {
 }
 .blog__title {
   border-bottom: 1px solid rgba(163, 155, 155, 0.1);
-  padding-top: 15rem;
+}
+@media screen and (max-width: 520px) {
+  .blog__title {
+    padding-top: 15rem;
+  }
 }
 .blog__cards {
   display: grid;
